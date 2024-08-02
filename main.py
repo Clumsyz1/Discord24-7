@@ -62,6 +62,14 @@ async def on_message(message):
 # ///////////////////// Commands /////////////////////
 # กำหนดคำสั่งให้บอท
 
+
+@bot.event
+async def on_ready():
+    print(f'Logged in as {bot.user.name}')
+    # ตั้งค่าการแสดงตัวตนเป็นเกมที่กำลังเล่น
+    await bot.change_presence(activity=discord.Game(name="กำลังเล่นเกม"))
+
+
 @bot.command()
 async def hello(ctx):
     await ctx.send(f"hello {ctx.author.name}!")

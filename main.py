@@ -60,7 +60,8 @@ async def on_message(message):
 async def on_ready():
     print(f'Logged in as {bot.user.name}')
     # ตั้งค่าการแสดงตัวตนเป็นเกมที่กำลังเล่น
-    await bot.change_presence(activity=discord.Game(name="กำลังเล่นเกม"))
+    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="PUN - BF (feat. URBOYTJ)"))
+
 
 
 # ///////////////////// Commands /////////////////////

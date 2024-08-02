@@ -62,11 +62,9 @@ async def on_message(message):
 async def on_ready():
     print(f'Logged in as {bot.user.name} - {bot.user.id}')
     # Set the bot's presence
-    activity = discord.Game(name="Playing a cool game!")
-    await bot.change_presence(status=discord.Status.online, activity=activity)
     activity = discord.Activity(type=discord.ActivityType.listening, name="fellow fellow - Proud")
-
-
+    await bot.change_presence(status=discord.Status.online, activity=activity)
+    
 # ///////////////////// Commands /////////////////////
 # กำหนดคำสั่งให้บอท
 

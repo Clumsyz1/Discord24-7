@@ -56,12 +56,15 @@ async def on_message(message):
     await bot.process_commands(message)
     # ทำคำสั่ง event แล้วไปทำคำสั่ง bot command ต่อ
 
+
+# Status Bot 
 @bot.event
 async def on_ready():
-    print(f'Logged in as {bot.user.name}')
-    # ตั้งค่าการแสดงตัวตนเป็นเกมที่กำลังเล่น
-    await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="PUN - BF (feat. URBOYTJ)"))
-
+    print(f'Logged in as {bot.user.name} - {bot.user.id}')
+    # Set the bot's presence
+    activity = discord.Game(name="Playing a cool game!")
+    await bot.change_presence(status=discord.Status.online, activity=activity)
+    activity = discord.Activity(type=discord.ActivityType.listening, name="PUN - BF (feat. URBOYTJ)")
 
 
 # ///////////////////// Commands /////////////////////

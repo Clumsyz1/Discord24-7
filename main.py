@@ -64,7 +64,7 @@ async def on_ready():
     # Set the bot's presence
     activity = discord.Game(name="Playing a cool game!")
     await bot.change_presence(status=discord.Status.online, activity=activity)
-    activity = discord.Activity(type=discord.ActivityType.listening, name="PUN - BF (feat. URBOYTJ)")
+    activity = discord.Activity(type=discord.ActivityType.listening, name="fellow fellow - Proud")
 
 
 # ///////////////////// Commands /////////////////////
